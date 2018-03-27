@@ -8,6 +8,8 @@ import { Menu } from './models/menu.models';
 })
 export class AppComponent {
   title: string = 'Faiza and Victor\'s Bakery';
+  subtitle: string = "~ Come to our Bakery instead of making it yourself! ~";
+
   sweetItems: Menu[] = [
     new Menu("Challa"),
     new Menu("Coffee and Cinnamon Croissant"),

@@ -1,5 +1,39 @@
 #menu {
   text-align: center;
   font-size: 30px;
+  font-family: fantasy;
+}
+#subtitle {
+  text-align: center;
+  font-size: 30px;
+  font-family: fantasy;
+}
 
+.column {
+  float:left;
+  width: 50%;
+}
+
+.row:after {
+  float: right;
+  content: "";
+  display: table;
+  clear: both;
+  padding-right: 10px;
+}
+
+#sweet {
+  padding-left: 10px;
+}
+
+#savoury {
+  padding-left: 10px;
+}
+
+#cookies {
+  padding-left: 10px;
+}
+
+#title {
+  font-family: cursive;
 }

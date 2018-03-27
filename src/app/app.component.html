@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <h1 id="title">
     Welcome to {{ title }}!
   </h1>
   <img width="700" alt="Angular Logo" src="https://19tuu71wmt281mi81umaplk1-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/slide4-r3-1600x800.jpg">
@@ -8,42 +8,45 @@
 <br>
 <hr>
 <h2 id="menu">Menu Items</h2>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h3> Sweet Pastries</h3>
+<h2 id="subtitle">{{subtitle}}</h2>
+<div class="row">
+<div class="column">
+
+
+      <h3 id="sweet"> Sweet Pastries</h3>
       <ul>
         <li *ngFor="let currentItem of sweetItems">{{currentItem.name}}</li>
       </ul>
-    </div>
 
-      <div class="col-md-4">
-        <h3> Savoury Pastries</h3>
+
+
+        <h3 id="savoury"> Savoury Pastries</h3>
         <ul>
-          <li *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}}</li>
+          <li *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}}{{currentSavouryItem.recipe}}</li>
+
         </ul>
-      </div>
 
-    <div class="col-md-4">
-      <h3> Cookies </h3>
+
+
+      <h3 id="cookies"> Cookies </h3>
       <ul>
-        <li *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}</li>
+        <li *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}{{currentCookieItem.recipe}}</li>
       </ul>
-    </div>
-</div>
 
-<div class="row">
-  <div class="col-md-4">
+    </div>
+
+    <div class="column">
+
     <h3>Cakes</h3>
     <ul>
-      <li *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}</li>
+      <li *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}{{currentCakeItem.recipe}}</li>
     </ul>
-  </div>
 
-  <div class="col-md-4">
+
+
     <h3>Coffee</h3>
     <ul>
-      <li *ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}</li>
+      <li *ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}</li>
     </ul>
-  </div>
+</div>
 </div>
