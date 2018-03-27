@@ -24,16 +24,27 @@
 
 #sweet {
   padding-left: 10px;
+  font-family: cursive;
 }
 
 #savoury {
   padding-left: 10px;
+  font-family: cursive;
 }
 
 #cookies {
   padding-left: 10px;
+  font-family: cursive;
 }
 
+ #cakes{
+   font-family: cursive;
+ }
+
+ #coffee{
+   font-family: cursive;
+ }
+ 
 #title {
   font-family: cursive;
 }

@@ -15,14 +15,14 @@
 
       <h3 id="sweet"> Sweet Pastries</h3>
       <ul>
-        <li *ngFor="let currentItem of sweetItems">{{currentItem.name}}</li>
+        <li [class]="priorityColor1(currentItem)" *ngFor="let currentItem of sweetItems">{{currentItem.name}} <br><button (click)="editItem()"> Edit </button></li>
       </ul>
 
 
 
         <h3 id="savoury"> Savoury Pastries</h3>
         <ul>
-          <li *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}}{{currentSavouryItem.recipe}}</li>
+          <li [class]="priorityColor2(currentSavouryItem)" *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}} <br><button (click)="editItem()"> Edit </button></li>
 
         </ul>
 
@@ -30,23 +30,23 @@
 
       <h3 id="cookies"> Cookies </h3>
       <ul>
-        <li *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}{{currentCookieItem.recipe}}</li>
+        <li [class]="priorityColor3(currentCookieItem)" *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}{{currentCookieItem.recipe}}<br><button (click)="editItem()"> Edit </button></li>
       </ul>
 
     </div>
 
     <div class="column">
 
-    <h3>Cakes</h3>
+    <h3 id="cakes">Cakes</h3>
     <ul>
-      <li *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}{{currentCakeItem.recipe}}</li>
+      <li [class]="priorityColor4(currentCakeItem)" *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}{{currentCakeItem.recipe}}<br><button (click)="editItem()"> Edit </button></li>
     </ul>
 
 
 
-    <h3>Coffee</h3>
+    <h3 id="coffee">Coffee</h3>
     <ul>
-      <li *ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}</li>
+      <li [class]="priorityColor5(currentCoffeeItem)"*ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}<br><button (click)="editItem()"> Edit </button></li>
     </ul>
 </div>
 </div>

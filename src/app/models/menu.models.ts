@@ -1,5 +1,5 @@
 export class Menu {
-  constructor(public name: string) { }
+  constructor(public name: string, public priority: string) { }
 }
 
 // export class Recipe {
