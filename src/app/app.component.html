@@ -3,18 +3,47 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="700" alt="Angular Logo" src="https://19tuu71wmt281mi81umaplk1-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/slide4-r3-1600x800.jpg">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<br>
+<hr>
+<h2 id="menu">Menu Items</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3> Sweet Pastries</h3>
+      <ul>
+        <li *ngFor="let currentItem of sweetItems">{{currentItem.name}}</li>
+      </ul>
+    </div>
 
+      <div class="col-md-4">
+        <h3> Savoury Pastries</h3>
+        <ul>
+          <li *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}}</li>
+        </ul>
+      </div>
+
+    <div class="col-md-4">
+      <h3> Cookies </h3>
+      <ul>
+        <li *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}</li>
+      </ul>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h3>Cakes</h3>
+    <ul>
+      <li *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}</li>
+    </ul>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Coffee</h3>
+    <ul>
+      <li *ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}</li>
+    </ul>
+  </div>
+</div>
