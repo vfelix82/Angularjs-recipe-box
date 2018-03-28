@@ -1,61 +1,42 @@
-<h1>Welcome, {{userName}}!</h1>
-
-<form>
-  <input [(ngModel)]="userName" type="text" name="user">
-</form>
-
-
 <div style="text-align:center">
-  <h1 id="title">
-    Welcome to {{ title }}!
-  </h1>
+  <h1 id="title"> Welcome to {{ title }}!</h1>
   <img width="700" alt="Angular Logo" src="https://19tuu71wmt281mi81umaplk1-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/slide4-r3-1600x800.jpg">
 </div>
 <br>
 <hr>
 <h2 id="menu">Menu Items</h2>
 <h2 id="subtitle">{{subtitle}}</h2>
+
 <div class="row">
-<div class="column">
+  <div class="column">
 
+    <h3 id="sweet"> Sweet Pastries</h3>
+    <app-item-list [childSweetItemList]="masterSweetItemsList" (clickSender)="editItem($event)"></app-item-list>
 
-      <h3 id="sweet"> Sweet Pastries</h3>
-      <ul>
-        <li [class]="priorityColor1(currentItem)" *ngFor="let currentItem of sweetItems">{{currentItem.name}} <br><button (click)="editItem(currentItem)"> Edit </button></li>
-      </ul>
+    <h3 id="savoury"> Savoury Pastries</h3>
+    <app-item-list [childSavouryItemList]="masterSavouryItemsList" (clickSender)="editItem($event)"></app-item-list>
 
-        <h3 id="savoury"> Savoury Pastries</h3>
-        <ul>
-          <li [class]="priorityColor2(currentSavouryItem)" *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}} <br><button (click)="editItem(currentSavouryItem)"> Edit </button></li>
+    <h3 id="cookies"> Cookies </h3>
+    <app-item-list [childCookieItemList]="masterCookieItemsList" (clickSender)="editItem($event)"></app-item-list>
 
-        </ul>
+  </div>
 
-      <h3 id="cookies"> Cookies </h3>
-      <ul>
-        <li [class]="priorityColor3(currentCookieItem)" *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}{{currentCookieItem.recipe}}<br><button (click)="editItem(currentCookieItem)"> Edit </button></li>
-      </ul>
-
-    </div>
-
-    <div class="column">
+  <div class="column">
 
     <h3 id="cakes">Cakes</h3>
-    <ul>
-      <li [class]="priorityColor4(currentCakeItem)" *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}{{currentCakeItem.recipe}}<br><button (click)="editItem(currentCakeItem)"> Edit </button></li>
-    </ul>
+    <app-item-list [childCakeItemList]="masterCakeItemsList" (clickSender)="editItem($event)"></app-item-list>
 
     <h3 id="coffee">Coffee</h3>
-    <ul>
-      <li [class]="priorityColor5(currentCoffeeItem)" *ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}<br><button (click)="editItem(currentCoffeeItem)"> Edit </button></li>
-    </ul>
-</div>
+    <app-item-list [childCoffeeItemList]="masterCoffeeItemsList" (clickSender)="editItem($event)"></app-item-list>
+
+  </div>
 </div>
 
 <div *ngIf="selectedItem">
   <h3>{{selectedItem.name}}</h3>
   <p>Chanege menu item name?</p>
   <h3>Edit Name?</h3>
-  <label>Enter a new name for Sweet Pastries:</label>
+  <label>Enter a new name for the slected Menu Item:</label>
   <input [(ngModel)]="selectedItem.name">
   <label> Enter an Item's Priority (Most Popular-Limited Time Only!)</label>
   <br>

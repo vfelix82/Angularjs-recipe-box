@@ -1,0 +1,24 @@
+
+<ul>
+  <li [class]="priorityColor1(currentItem)" *ngFor="let currentItem of childSweetItemList">{{currentItem.name}} <br><button (click)="editButtonClicked(currentItem)"> Edit </button></li>
+</ul>
+
+
+<ul>
+  <li [class]="priorityColor2(currentSavouryItem)" *ngFor="let currentSavouryItem of childSavouryItemList">{{currentSavouryItem.name}} <br><button (click)="editButtonClicked(currentSavouryItem)"> Edit </button></li>
+</ul>
+
+
+<ul>
+  <li [class]="priorityColor3(currentCookieItem)" *ngFor="let currentCookieItem of childCookieItemList">{{currentCookieItem.name}}{{currentCookieItem.recipe}}<br><button (click)="editButtonClicked(currentCookieItem)"> Edit </button></li>
+</ul>
+
+
+<ul>
+  <li [class]="priorityColor4(currentCakeItem)" *ngFor="let currentCakeItem of childCakeItemList">{{currentCakeItem.name}}{{currentCakeItem.recipe}}<br><button (click)="editButtonClicked(currentCakeItem)"> Edit </button></li>
+</ul>
+
+
+<ul>
+  <li [class]="priorityColor5(currentCoffeeItem)" *ngFor="let currentCoffeeItem of childCoffeeItemList">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}<br><button (click)="editButtonClicked(currentCoffeeItem)"> Edit </button></li>
+</ul>
