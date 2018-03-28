@@ -33,3 +33,5 @@
 </div>
 
 <app-edit-item [selectedItem]="selectedItem" (clickedDone)="finishedEditing()"></app-edit-item>
+
+<app-new-item (sendItem)="addItem($event)"></app-new-item>

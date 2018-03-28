@@ -1,0 +1,21 @@
+<h1> New Item </h1>
+
+<div>
+
+  <label> Enter a new menu item: </label>
+  <input #newItem>
+
+</div>
+
+<div>
+
+  <label> Menu Item Priority: </label>
+  <select #newPriority>
+      <option [value]="1"> Most Popular! </option>
+      <option [value]="2"> 2nd Most Popular! </option>
+      <option [value]="3"> 3rd Most Popular! </option>
+      <option [value]="4"> New! </option>
+      <option [value]="5"> Limited Time Only! </option>
+  </select>
+  <button (click)="submitForm(newItem.value, newPriority.value)"> Add </button>
+</div>

@@ -60,4 +60,12 @@ export class AppComponent {
   finishedEditing() {
     this.selectedItem = null;
   }
+
+  addItem(newItem: Menu){
+    this.masterSweetItemsList.push(newItem);
+    this.masterSavouryItemsList.push(newItem);
+    this.masterCookieItemsList.push(newItem);
+    this.masterCakeItemsList.push(newItem);
+    this.masterCoffeeItemsList.push(newItem);
+  }
 }
