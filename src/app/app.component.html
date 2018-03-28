@@ -32,19 +32,4 @@
   </div>
 </div>
 
-<div *ngIf="selectedItem">
-  <h3>{{selectedItem.name}}</h3>
-  <p>Chanege menu item name?</p>
-  <h3>Edit Name?</h3>
-  <label>Enter a new name for the slected Menu Item:</label>
-  <input [(ngModel)]="selectedItem.name">
-  <label> Enter an Item's Priority (Most Popular-Limited Time Only!)</label>
-  <br>
-  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="1"> Most Popular! (Highest Priority) <br>
-  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="2"> 2nd Most Popular! (2nd Highest Priority) <br>
-  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="3"> 3rd Most Popular! (3rd Highest Priority) <br>
-  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="4"> New! (4th Highest Priority) <br>
-  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="5"> Limited Time Only! (5th Highest Priority) <br>
-  <br>
-  <button (click)="finishedEditing()"> Done </button>
-</div>
+<app-edit-item [selectedItem]="selectedItem" (clickedDone)="finishedEditing()"></app-edit-item>
