@@ -1,4 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<h1>Welcome, {{userName}}!</h1>
+
+<form>
+  <input [(ngModel)]="userName" type="text" name="user">
+</form>
+
+
 <div style="text-align:center">
   <h1 id="title">
     Welcome to {{ title }}!
@@ -15,22 +21,18 @@
 
       <h3 id="sweet"> Sweet Pastries</h3>
       <ul>
-        <li [class]="priorityColor1(currentItem)" *ngFor="let currentItem of sweetItems">{{currentItem.name}} <br><button (click)="editItem()"> Edit </button></li>
+        <li [class]="priorityColor1(currentItem)" *ngFor="let currentItem of sweetItems">{{currentItem.name}} <br><button (click)="editItem(currentItem)"> Edit </button></li>
       </ul>
-
-
 
         <h3 id="savoury"> Savoury Pastries</h3>
         <ul>
-          <li [class]="priorityColor2(currentSavouryItem)" *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}} <br><button (click)="editItem()"> Edit </button></li>
+          <li [class]="priorityColor2(currentSavouryItem)" *ngFor="let currentSavouryItem of savouryItems">{{currentSavouryItem.name}} <br><button (click)="editItem(currentSavouryItem)"> Edit </button></li>
 
         </ul>
 
-
-
       <h3 id="cookies"> Cookies </h3>
       <ul>
-        <li [class]="priorityColor3(currentCookieItem)" *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}{{currentCookieItem.recipe}}<br><button (click)="editItem()"> Edit </button></li>
+        <li [class]="priorityColor3(currentCookieItem)" *ngFor="let currentCookieItem of cookieItems">{{currentCookieItem.name}}{{currentCookieItem.recipe}}<br><button (click)="editItem(currentCookieItem)"> Edit </button></li>
       </ul>
 
     </div>
@@ -39,14 +41,29 @@
 
     <h3 id="cakes">Cakes</h3>
     <ul>
-      <li [class]="priorityColor4(currentCakeItem)" *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}{{currentCakeItem.recipe}}<br><button (click)="editItem()"> Edit </button></li>
+      <li [class]="priorityColor4(currentCakeItem)" *ngFor="let currentCakeItem of cakeItems">{{currentCakeItem.name}}{{currentCakeItem.recipe}}<br><button (click)="editItem(currentCakeItem)"> Edit </button></li>
     </ul>
-
-
 
     <h3 id="coffee">Coffee</h3>
     <ul>
-      <li [class]="priorityColor5(currentCoffeeItem)"*ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}<br><button (click)="editItem()"> Edit </button></li>
+      <li [class]="priorityColor5(currentCoffeeItem)" *ngFor="let currentCoffeeItem of coffeeItems">{{currentCoffeeItem.name}}{{currentCoffeeItem.recipe}}<br><button (click)="editItem(currentCoffeeItem)"> Edit </button></li>
     </ul>
 </div>
+</div>
+
+<div *ngIf="selectedItem">
+  <h3>{{selectedItem.name}}</h3>
+  <p>Chanege menu item name?</p>
+  <h3>Edit Name?</h3>
+  <label>Enter a new name for Sweet Pastries:</label>
+  <input [(ngModel)]="selectedItem.name">
+  <label> Enter an Item's Priority (Most Popular-Limited Time Only!)</label>
+  <br>
+  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="1"> Most Popular! (Highest Priority) <br>
+  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="2"> 2nd Most Popular! (2nd Highest Priority) <br>
+  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="3"> 3rd Most Popular! (3rd Highest Priority) <br>
+  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="4"> New! (4th Highest Priority) <br>
+  <input type="radio" [(ngModel)]="selectedItem.priority" [value]="5"> Limited Time Only! (5th Highest Priority) <br>
+  <br>
+  <button (click)="finishedEditing()"> Done </button>
 </div>

@@ -119,7 +119,32 @@ export class AppComponent {
     new Menu("Cafe Au Lait", "Limited Time Only!")
   ];
 
-  editItem() {
-   alert("Time to edit a Menu Item!");
+  // selectedItem: Menu = this.sweetItems[0];
+  // selectedSavouryItem: Menu = this.savouryItems[0];
+  // selectedCookieItem: Menu = this.cookieItems[0];
+  // selectedCakeItem: Menu = this.cakeItems[0];
+  // selectedCoffeeItem: Menu = this.coffeeItems[0];
+
+  selectedItem = null;
+  // selectedSavouryItem = null;
+  // selectedCookieItem = null;
+  // selectedCakeItem = null;
+  // selectedCoffeeItem = null;
+
+  editItem(clickedItem) {
+  this.selectedItem = clickedItem;
+  // this.selectedSavouryItem = clickedItem;
+  // this.selectedCookieItem = clickedItem;
+  // this.selectedCakeItem = clickedItem;
+  // this.selectedCoffeeItem = clickedItem;
+
+  }
+
+  finishedEditing() {
+    this.selectedItem = null;
+    // this.selectedSavouryItem = null;
+    // this.selectedCookieItem = null;
+    // this.selectedCakeItem = null;
+    // this.selectedCoffeeItem = null;
   }
 }
